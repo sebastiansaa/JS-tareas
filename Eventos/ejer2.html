@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ejercicio.js"></script>
+    <style>
+        #box{
+            background-color: red;
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>Corección de los ejercicios 2</h1>
+    <p><a href="index.html">Atrás</a></p>
+    <p>Crea una aplicación cuyo código HTML contenga únicamente una caja roja. Cada vez que el usuario pulse algunas de las teclas de los cursores (flecha arriba, flecha abajo, flecha a derecha, flecha a izquierda) la caja debe desplazarse 10 px en la dirección establecida por el cursor.</p>
+    
+  
+
+<main>
+    <div id="box"></div>
+</main>
+
+<script>
+    let box = document.getElementById("box");
+
+    document.body.addEventListener("keydown", (event) => {
+        switch(event.key) {
+            case "ArrowUp":
+                console.log("El usuario ha pulsado el cursor hacia arriba");
+                let currentTop = box.style.top ? parseInt(box.style.top) : 0;
+                box.style.top = `${currentTop - 10}px`;
+                break;
+            case "ArrowDown":
+                console.log("El usuario ha pulsado el cursor hacia abajo");
+                let currentTopDown = box.style.top ? parseInt(box.style.top) : 0;
+                box.style.top = `${currentTopDown + 10}px`;
+                break;
+            case "ArrowLeft":
+                console.log("El usuario ha pulsado el cursor hacia la izquierda");
+                let currentLeft = box.style.left ? parseInt(box.style.left) : 0;
+                box.style.left = `${currentLeft - 10}px`;
+                break;
+            case "ArrowRight":
+                console.log("El usuario ha pulsado el cursor hacia la derecha");
+                let currentLeftRight = box.style.left ? parseInt(box.style.left) : 0;
+                box.style.left = `${currentLeftRight + 10}px`;
+                break;
+            default:
+                console.log("No has pulsado una tecla de flecha");
+        }
+    });
+</script>
+
+
+</body>
+</html>

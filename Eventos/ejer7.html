@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="ejer7.js" defer></script>
+    <style>
+        .box {
+            border: 1px solid black;
+            width: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 40px;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        .green{
+            background-color: green;
+            border-color: green;
+           
+        }
+        .red{
+            background-color: red;
+            border-color: red;
+           
+        }
+    </style>
+</head>
+<body>
+    <h1>Corección del ejercicio 7</h1>
+    <p><a href="index.html">Atras</a></p>
+    <p>Escribe un programa para simular la velocidad de pulsación de dos teclas. En pantalla aparecerán dos cajas, una verde y otra roja, una debajo de otra. El alto de cada caja será de 40 px y el ancho inicial de 10 px cada una. La primera caja incrementará su ancho 5px cada vez que se pulse la tecla [a]. La segunda caja hará lo mismo cuando se pulse la tecla [ñ]. El juego termina cuando una de las cajas llega a 500 px de ancho. En ese momento deben desactivarse los eventos de ambas teclas y mostrarse un mensaje bajo las cajas que ponga «GANA VERDE» • «GANA ROJO». Se trata de calcular con qué mano eres capaz de realizar más pulsaciones.</p>
+    
+    <main>
+        <section class="boxes">
+           <div class="box green" data-letter="a">A</div> 
+           <div class="box red" data-letter="ñ">Ñ</div>
+           <p id="result"></p>
+        </section>
+       
+    </main>
+
+
+</body>
+</html>
